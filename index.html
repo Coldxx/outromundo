@@ -4,128 +4,164 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Outro Mundo Otaku | Achadinhos de anime na Shopee</title>
-<meta name="description" content="Os produtos de anime mais vendidos da semana na Shopee: action figures, chaveiros, camisetas e decoração de One Piece, Jujutsu Kaisen, Dragon Ball, Naruto e mais.">
+<meta name="description" content="Mais de 100 achadinhos de anime mais vendidos na Shopee: action figures, chaveiros, camisetas, mangás e decoração de One Piece, Naruto, Jujutsu Kaisen, Demon Slayer, Dragon Ball e mais.">
 <meta property="og:title" content="Achadinhos de anime | Outro Mundo Otaku">
-<meta property="og:description" content="Os mais vendidos de anime na Shopee, com preço e link direto.">
+<meta property="og:description" content="Mais de 100 produtos de anime mais vendidos da Shopee, com preço e link direto.">
 <meta property="og:image" content="https://coldxx.github.io/outromundo/img/rafa-parafuso.jpg">
 <meta property="og:url" content="https://coldxx.github.io/outromundo/">
 <meta name="theme-color" content="#0b0a17">
 <link rel="icon" href="img/icone.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://down-br.img.susercontent.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --fundo: #0b0a17;
-    --texto: #f4f2ff;
-    --suave: #b9b4d6;
-    --vidro: rgba(255, 255, 255, 0.07);
-    --vidro-forte: rgba(255, 255, 255, 0.12);
-    --borda: rgba(255, 255, 255, 0.14);
-    --rosa: #ff4d8d;
-    --roxo: #8b5cf6;
-    --ciano: #22d3ee;
-    --verde: #34d399;
-    --raio: 22px;
-    --raio-p: 14px;
-    --margem: 16px;
+    --fundo: #0b0a17; --texto: #f4f2ff; --suave: #b9b4d6;
+    --vidro: rgba(255,255,255,.07); --vidro-forte: rgba(255,255,255,.12); --borda: rgba(255,255,255,.14);
+    --rosa: #ff4d8d; --roxo: #8b5cf6; --ciano: #22d3ee; --verde: #34d399; --amarelo: #fbbf24;
+    --raio: 22px; --raio-p: 14px; --margem: 16px;
   }
   * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-  body {
-    margin: 0; min-height: 100vh;
-    font-family: "Outfit", system-ui, sans-serif;
-    color: var(--texto); background: var(--fundo);
-    line-height: 1.45; overflow-x: hidden;
-  }
-  /* luzes de fundo que dão cor ao vidro */
-  .luzes { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: clip; }
+  body { margin: 0; min-height: 100vh; font-family: "Outfit", system-ui, sans-serif; color: var(--texto); background: var(--fundo); line-height: 1.45; overflow-x: hidden; }
+  .luzes { position: fixed; inset: 0; z-index: -2; overflow: hidden; pointer-events: none; }
   .luzes span { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .55; animation: flutua 18s ease-in-out infinite alternate; }
   .luzes span:nth-child(1) { width: 46vmax; height: 46vmax; background: var(--roxo); top: -14vmax; left: -12vmax; }
   .luzes span:nth-child(2) { width: 38vmax; height: 38vmax; background: var(--rosa); top: 30vh; right: -16vmax; animation-delay: -6s; }
   .luzes span:nth-child(3) { width: 32vmax; height: 32vmax; background: var(--ciano); bottom: -14vmax; left: 20vw; opacity: .35; animation-delay: -12s; }
   @keyframes flutua { to { transform: translate(4vmax, 3vmax) scale(1.08); } }
-  @media (prefers-reduced-motion: reduce) { .luzes span { animation: none; } html { scroll-behavior: auto; } }
-
+  #particulas { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
   img { display: block; max-width: 100%; }
   a { color: inherit; }
   .miolo { max-width: 1180px; margin: 0 auto; padding: 0 var(--margem); }
-  .vidro {
-    background: var(--vidro);
-    border: 1px solid var(--borda);
-    -webkit-backdrop-filter: blur(18px) saturate(150%);
-            backdrop-filter: blur(18px) saturate(150%);
-  }
+  .vidro { background: var(--vidro); border: 1px solid var(--borda); -webkit-backdrop-filter: blur(18px) saturate(150%); backdrop-filter: blur(18px) saturate(150%); }
   :focus-visible { outline: 2px solid var(--ciano); outline-offset: 3px; }
+  .botao { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 0 22px; border-radius: 999px; border: 0; cursor: pointer; font: inherit; font-weight: 600; color: #fff; text-decoration: none; background: linear-gradient(135deg, var(--rosa), var(--roxo)); box-shadow: 0 8px 24px -8px rgba(255,77,141,.6); transition: transform .15s ease, box-shadow .2s ease, filter .2s; }
+  .botao:hover { filter: brightness(1.1); box-shadow: 0 10px 30px -8px rgba(255,77,141,.8); }
+  .botao:active { transform: scale(.97); }
+  .botao.claro { background: var(--vidro-forte); border: 1px solid var(--borda); box-shadow: none; }
 
   /* topo */
   .topo { position: sticky; top: 10px; z-index: 20; margin-top: 10px; }
-  .barra {
-    display: flex; align-items: center; gap: 12px;
-    padding: 10px 10px 10px 14px; border-radius: 999px;
-  }
+  .barra { display: flex; align-items: center; gap: 12px; padding: 10px 10px 10px 14px; border-radius: 999px; }
   .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; white-space: nowrap; }
   .logo img { width: 34px; height: 34px; border-radius: 50%; }
   .logo span { display: none; }
-  .busca {
-    flex: 1; display: flex; align-items: center; gap: 8px;
-    background: rgba(0,0,0,.25); border: 1px solid var(--borda); border-radius: 999px; padding: 0 14px; min-height: 42px;
-  }
+  .busca { flex: 1; display: flex; align-items: center; gap: 8px; background: rgba(0,0,0,.25); border: 1px solid var(--borda); border-radius: 999px; padding: 0 14px; min-height: 42px; }
   .busca svg { flex: none; opacity: .7; }
   .busca input { flex: 1; min-width: 0; background: none; border: 0; color: var(--texto); font: inherit; font-size: 16px; outline: none; }
   .busca input::placeholder { color: var(--suave); }
-  .botao {
-    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-    min-height: 46px; padding: 0 22px; border-radius: 999px; border: 0; cursor: pointer;
-    font: inherit; font-weight: 600; color: #fff; text-decoration: none;
-    background: linear-gradient(135deg, var(--rosa), var(--roxo));
-    box-shadow: 0 8px 24px -8px rgba(255, 77, 141, .6);
-    transition: transform .15s ease, box-shadow .2s ease, filter .2s;
-  }
-  .botao:hover { filter: brightness(1.1); box-shadow: 0 10px 30px -8px rgba(255, 77, 141, .8); }
-  .botao:active { transform: scale(.97); }
   .barra .botao { display: none; }
-  @media (min-width: 720px) {
-    .logo span { display: inline; }
-    .barra .botao { display: inline-flex; }
-  }
+  @media (min-width: 720px) { .logo span { display: inline; } .barra .botao { display: inline-flex; } }
 
-  /* destaque */
-  .heroi { display: grid; gap: 22px; padding: 34px 0 10px; align-items: center; }
-  .selo-topo {
-    display: inline-flex; align-items: center; gap: 8px; width: fit-content;
-    padding: 6px 12px 6px 8px; border-radius: 999px; font-size: 14px; color: var(--suave);
-  }
+  /* hero */
+  .heroi { display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 34px 0 10px; align-items: center; }
+  .heroi > * { min-width: 0; }
+  .selo-topo { display: inline-flex; align-items: center; gap: 8px; width: fit-content; padding: 6px 12px 6px 8px; border-radius: 999px; font-size: 14px; color: var(--suave); }
   .selo-topo b { background: var(--verde); color: #04281b; border-radius: 999px; padding: 2px 8px; font-size: 12px; }
   h1 { font-size: clamp(2.2rem, 7.5vw, 4.2rem); line-height: 1.02; letter-spacing: -0.03em; margin: 14px 0 12px; font-weight: 800; }
   h1 em { font-style: normal; background: linear-gradient(90deg, var(--rosa), var(--ciano)); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .heroi p.sub { color: var(--suave); font-size: 1.1rem; margin: 0 0 22px; max-width: 46ch; }
-  .numeros { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-  .numeros div { border-radius: var(--raio-p); padding: 10px 14px; }
-  .numeros strong { display: block; font-size: 1.25rem; }
-  .numeros span { font-size: 13px; color: var(--suave); }
-
-  .estrela { border-radius: var(--raio); padding: 14px; display: grid; gap: 14px; position: relative; }
-  .estrela .tag { position: absolute; top: 24px; left: 24px; z-index: 2; }
-  .estrela .foto { background: #fff; border-radius: 16px; aspect-ratio: 1; overflow: hidden; }
-  .estrela .foto img { width: 100%; height: 100%; object-fit: contain; transition: transform .5s ease; }
-  .estrela:hover .foto img { transform: scale(1.04); }
-  .estrela h2 { font-size: 1.35rem; margin: 2px 0 0; line-height: 1.2; }
-  .linha-preco { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
-  .preco { font-size: 1.7rem; font-weight: 800; }
-  .antes { color: var(--suave); text-decoration: line-through; font-size: .95rem; }
-  .estrela .botao { width: 100%; }
+  .acoes-heroi { display: flex; flex-wrap: wrap; gap: 10px; }
+  .palco { position: relative; }
+  .mascote { position: fixed; z-index: 30; right: 8px; bottom: 8px; width: 74px; animation: boia 4.5s ease-in-out infinite; filter: drop-shadow(0 14px 18px rgba(0,0,0,.5)); transition: transform .2s; }
+  .mascote img { width: 100%; height: auto; }
+  .mascote:active { transform: scale(.94); }
+  .balao { position: absolute; right: 78%; top: 6px; background: #fff; color: #14112b; font-weight: 700; font-size: 13px; padding: 7px 11px; border-radius: 14px; white-space: nowrap; opacity: 0; transform: translateY(6px); transition: opacity .3s, transform .3s; pointer-events: none; }
+  .balao::after { content: ""; position: absolute; right: -6px; top: 12px; border: 6px solid transparent; border-left-color: #fff; border-right: 0; }
+  .mascote.fala .balao, .mascote:hover .balao, .mascote:focus-visible .balao { opacity: 1; transform: none; }
+  @keyframes boia { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-14px) rotate(2deg); } }
   @media (min-width: 900px) {
-    .heroi { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 48px; padding: 64px 0 24px; }
-    .estrela { grid-template-columns: 1fr; }
+    .heroi { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 48px; padding: 70px 0 24px; }
+    .mascote { width: 118px; right: 14px; bottom: 14px; }
   }
+}
 
   .tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
   .tag.desc { background: var(--rosa); color: #fff; }
   .tag.top { background: rgba(11,10,23,.75); color: #fff; border: 1px solid var(--borda); }
+  .linha-preco { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .preco { font-size: 1.7rem; font-weight: 800; }
+  .antes { color: var(--suave); text-decoration: line-through; font-size: .9rem; }
 
-  /* filtros */
-  .vitrine { padding: 34px 0 20px; }
+  /* slide */
+  .slider { position: relative; border-radius: var(--raio); padding: 14px; }
+  .janela { overflow: hidden; border-radius: 16px; }
+  .slides { display: flex; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+  .slide { flex: 0 0 100%; min-width: 0; display: grid; gap: 10px; text-decoration: none; }
+  .slide .foto { position: relative; background: #fff; border-radius: 16px; aspect-ratio: 1; overflow: hidden; }
+  .slide .foto img { width: 100%; height: 100%; object-fit: contain; }
+  .slide .foto .tag { position: absolute; top: 10px; left: 10px; }
+  .slide .foto .tag + .tag { left: auto; right: 10px; }
+  .slide h2 { font-size: 1.15rem; margin: 2px 0 0; line-height: 1.25; min-height: 2.5em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .slide .botao { width: 100%; }
+  .slider-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
+  .pontos { display: flex; gap: 6px; }
+  .pontos button { width: 8px; height: 8px; padding: 0; border-radius: 999px; border: 0; background: rgba(255,255,255,.35); cursor: pointer; transition: width .3s, background .3s; }
+  .pontos button[aria-current="true"] { width: 24px; background: #fff; }
+  .setas { display: flex; gap: 8px; }
+  .seta { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; cursor: pointer; color: var(--texto); background: var(--vidro); border: 1px solid var(--borda); font-size: 18px; transition: background .2s, transform .15s; }
+  .seta:hover { background: var(--vidro-forte); }
+  .seta:active { transform: scale(.92); }
+
+  /* painel de destaques */
+  .bloco { padding: 44px 0 6px; }
+  .bloco-cab { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+  .bloco-cab h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0; letter-spacing: -0.02em; }
+  .bloco-cab p { margin: 4px 0 0; color: var(--suave); font-size: 14px; }
+  .painel { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (min-width: 900px) { .painel { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; } }
+  .numero { border-radius: var(--raio); padding: 16px; }
+  .numero span { display: block; font-size: 13px; color: var(--suave); }
+  .numero strong { display: block; font-size: clamp(1.6rem, 5vw, 2.2rem); font-weight: 800; letter-spacing: -0.02em; margin-top: 2px; }
+  .numero small { color: var(--ciano); font-size: 13px; font-weight: 600; }
+  .recorde { border-radius: var(--raio); padding: 12px; display: grid; grid-template-columns: 76px 1fr; gap: 12px; align-items: center; text-decoration: none; transition: transform .2s, background .2s; }
+  .recorde:hover { transform: translateY(-3px); background: var(--vidro-forte); }
+  .recorde img { width: 76px; height: 76px; border-radius: 12px; background: #fff; object-fit: contain; }
+  .recorde span { display: block; font-size: 12px; font-weight: 700; color: var(--amarelo); text-transform: none; }
+  .recorde b { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 14px; line-height: 1.25; margin: 2px 0; }
+  .recorde em { font-style: normal; font-weight: 800; }
+  .ranking { grid-column: 1 / -1; border-radius: var(--raio); padding: 16px; }
+  .ranking h3 { margin: 0 0 10px; font-size: 1.05rem; }
+  .barras { display: grid; gap: 8px; }
+  .barras button { all: unset; cursor: pointer; display: grid; grid-template-columns: 130px 1fr 34px; gap: 10px; align-items: center; font-size: 14px; }
+  .barras button:focus-visible { outline: 2px solid var(--ciano); border-radius: 6px; }
+  .barras .trilha { height: 10px; border-radius: 999px; background: rgba(255,255,255,.08); overflow: hidden; }
+  .barras .enche { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--rosa), var(--ciano)); transform-origin: left; transform: scaleX(0); transition: transform 1s cubic-bezier(.2,.7,.2,1); }
+  .barras b { text-align: right; }
+  @media (min-width: 900px) { .ranking { grid-column: span 2; grid-row: span 2; } .barras button { grid-template-columns: 150px 1fr 34px; } }
+
+  /* carrossel e cards */
+  .trilho { display: grid; grid-auto-flow: column; grid-auto-columns: 68%; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; scrollbar-width: none; }
+  .trilho::-webkit-scrollbar { display: none; }
+  .trilho .card { scroll-snap-align: start; }
+  @media (min-width: 700px) { .trilho { grid-auto-columns: 32%; gap: 16px; } }
+  @media (min-width: 1040px) { .trilho { grid-auto-columns: calc((100% - 3 * 18px) / 4.3); gap: 18px; } }
+  .card { border-radius: var(--raio); padding: 10px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; transition: transform .25s ease, background .25s, border-color .25s; }
+  .card:hover { transform: translateY(-4px); background: var(--vidro-forte); border-color: rgba(255,255,255,.28); }
+  .card .foto { position: relative; background: #fff; border-radius: 16px; aspect-ratio: 1; overflow: hidden; }
+  .card .foto img { width: 100%; height: 100%; object-fit: contain; transition: transform .4s ease; }
+  .card:hover .foto img { transform: scale(1.05); }
+  .card .tag { position: absolute; top: 8px; left: 8px; }
+  .card .anime { font-size: 12px; color: var(--ciano); font-weight: 600; }
+  .card .nome { font-size: 14px; line-height: 1.3; margin: 0; font-weight: 500; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.6em; }
+  .card .linha-preco { gap: 6px; margin-top: auto; }
+  .card .preco { font-size: 1.25rem; }
+  .card .antes { font-size: .78rem; }
+  .card .vendidos { font-size: 12px; color: var(--suave); }
+  .card .comprar { display: flex; align-items: center; justify-content: center; min-height: 40px; border-radius: 12px; font-weight: 600; font-size: 14px; color: #fff; background: linear-gradient(135deg, var(--rosa), var(--roxo)); }
+  .destaques { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .destaques .card:first-child { grid-column: 1 / -1; }
+  .destaques .card:first-child .nome { font-size: 1.2rem; }
+  .destaques .card:first-child .preco { font-size: 1.6rem; }
+  @media (min-width: 900px) {
+    .destaques { grid-template-columns: 2fr 1fr 1fr; gap: 18px; }
+    .destaques .card:first-child { grid-column: 1; grid-row: 1 / span 2; }
+    .destaques .card:first-child .foto { aspect-ratio: auto; flex: 1; min-height: 360px; }
+  }
+
+  /* todos */
   .cab-vitrine { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px; }
   .cab-vitrine h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0; letter-spacing: -0.02em; }
   .cab-vitrine p { margin: 4px 0 0; color: var(--suave); font-size: 14px; }
@@ -133,149 +169,62 @@
   .ordem option { color: #111; }
   .filtros { display: flex; gap: 8px; overflow-x: auto; padding: 16px 2px 6px; scrollbar-width: none; }
   .filtros::-webkit-scrollbar { display: none; }
-  .filtro {
-    flex: none; border-radius: 999px; padding: 9px 16px; cursor: pointer;
-    font: inherit; font-size: 15px; color: var(--texto); background: var(--vidro); border: 1px solid var(--borda);
-    transition: background .2s, border-color .2s, transform .15s;
-  }
+  .filtro { flex: none; border-radius: 999px; padding: 9px 16px; cursor: pointer; font: inherit; font-size: 15px; color: var(--texto); background: var(--vidro); border: 1px solid var(--borda); transition: background .2s, transform .15s; }
   .filtro:hover { background: var(--vidro-forte); }
   .filtro:active { transform: scale(.96); }
   .filtro[aria-pressed="true"] { background: #fff; color: #14112b; border-color: #fff; font-weight: 600; }
-
-  /* grade de produtos */
+  .filtro small { opacity: .6; margin-left: 4px; }
   .grade { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding-top: 14px; }
   @media (min-width: 700px) { .grade { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; } }
   @media (min-width: 1040px) { .grade { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; } }
-  .card {
-    border-radius: var(--raio); padding: 10px; display: flex; flex-direction: column; gap: 10px;
-    text-decoration: none; transition: transform .25s ease, background .25s, border-color .25s;
-  }
-  .card:hover { transform: translateY(-4px); background: var(--vidro-forte); border-color: rgba(255,255,255,.28); }
-  .card .foto { position: relative; background: #fff; border-radius: 16px; aspect-ratio: 1; overflow: hidden; }
-  .card .foto img { width: 100%; height: 100%; object-fit: contain; transition: transform .4s ease; }
-  .card:hover .foto img { transform: scale(1.05); }
-  .card .tag { position: absolute; top: 8px; left: 8px; }
-  .card .anime { font-size: 12px; color: var(--ciano); font-weight: 600; }
-  .card .nome {
-    font-size: 15px; line-height: 1.3; margin: 0;
-    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.6em;
-  }
-  .card .linha-preco { gap: 6px; margin-top: auto; }
-  .card .preco { font-size: 1.3rem; }
-  .card .antes { font-size: .8rem; }
-  .card .envio { font-size: 12px; color: var(--suave); }
-  .card .comprar {
-    display: flex; align-items: center; justify-content: center; min-height: 42px; border-radius: 12px;
-    font-weight: 600; font-size: 15px; color: #fff; background: linear-gradient(135deg, var(--rosa), var(--roxo));
-  }
+  .mais { display: flex; justify-content: center; padding: 20px 0 0; }
   .vazio { grid-column: 1 / -1; text-align: center; color: var(--suave); padding: 40px 0; }
 
-  /* confiança */
-  .confia { display: grid; gap: 12px; padding: 40px 0 10px; }
+  .confia { display: grid; gap: 12px; padding: 44px 0 10px; }
   @media (min-width: 800px) { .confia { grid-template-columns: repeat(3, 1fr); } }
   .confia div { border-radius: var(--raio); padding: 20px; display: flex; gap: 14px; align-items: flex-start; }
   .confia svg { flex: none; }
   .confia h3 { margin: 0 0 4px; font-size: 1.05rem; }
   .confia p { margin: 0; color: var(--suave); font-size: 14px; }
 
-  /* anime, discreto */
-  .anime-faixa { margin: 30px 0 10px; border-radius: var(--raio); padding: 16px; display: flex; gap: 14px; align-items: center; }
-  .anime-faixa img { width: 56px; height: 56px; border-radius: 14px; object-fit: cover; flex: none; }
-  .anime-faixa p { margin: 0; font-size: 14px; color: var(--suave); }
-  .anime-faixa strong { color: var(--texto); }
-  .anime-faixa a { margin-left: auto; white-space: nowrap; font-size: 14px; font-weight: 600; color: var(--ciano); text-decoration: none; }
-
-  footer { padding: 26px 0 40px; color: var(--suave); font-size: 13px; }
-  footer p { margin: 6px 0; max-width: 80ch; }
-
-  /* slide do topo */
-  .heroi { grid-template-columns: minmax(0, 1fr); }
-  .heroi > * { min-width: 0; }
-  .slider { position: relative; border-radius: var(--raio); padding: 14px; min-width: 0; }
-  .janela { overflow: hidden; border-radius: 16px; }
-  .slides { display: flex; transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
-  .slide { flex: 0 0 100%; min-width: 0; display: grid; gap: 12px; text-decoration: none; }
-  @media (prefers-reduced-motion: reduce) { .slides { transition: none; } }
-  .slide .foto { position: relative; background: #fff; border-radius: 16px; aspect-ratio: 1; overflow: hidden; }
-  .slide .foto img { width: 100%; height: 100%; object-fit: contain; }
-  .slide .foto .tag { position: absolute; top: 10px; left: 10px; }
-  .slide .foto .tag + .tag { left: auto; right: 10px; }
-  .slide h2 { font-size: 1.3rem; margin: 2px 0 0; line-height: 1.2; min-height: 2.4em; }
-  .slide .botao { width: 100%; }
-  .slider-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
-  .pontos { display: flex; gap: 6px; }
-  .pontos button { width: 8px; height: 8px; padding: 0; border-radius: 999px; border: 0; background: rgba(255,255,255,.35); cursor: pointer; transition: width .3s, background .3s; }
-  .pontos button[aria-current="true"] { width: 24px; background: #fff; }
-  .setas { display: flex; gap: 8px; }
-  .seta {
-    width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; cursor: pointer;
-    color: var(--texto); background: var(--vidro); border: 1px solid var(--borda); font-size: 18px;
-    transition: background .2s, transform .15s;
-  }
-  .seta:hover { background: var(--vidro-forte); }
-  .seta:active { transform: scale(.92); }
-
-  /* carrossel de ofertas */
-  .bloco { padding: 40px 0 6px; }
-  .bloco-cab { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-  .bloco-cab h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0; letter-spacing: -0.02em; }
-  .bloco-cab p { margin: 4px 0 0; color: var(--suave); font-size: 14px; }
-  .trilho {
-    display: grid; grid-auto-flow: column; grid-auto-columns: 68%; gap: 12px;
-    overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; scrollbar-width: none;
-  }
-  .trilho::-webkit-scrollbar { display: none; }
-  .trilho .card { scroll-snap-align: start; }
-  @media (min-width: 700px) { .trilho { grid-auto-columns: 32%; gap: 16px; } }
-  @media (min-width: 1040px) { .trilho { grid-auto-columns: calc((100% - 3 * 18px) / 4.3); gap: 18px; } }
-
-  /* destaques */
-  .destaques { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .destaques .card:first-child { grid-column: 1 / -1; }
-  .destaques .card:first-child .nome { font-size: 1.25rem; }
-  .destaques .card:first-child .preco { font-size: 1.7rem; }
-  @media (min-width: 900px) {
-    .destaques { grid-template-columns: 2fr 1fr 1fr; grid-template-rows: auto auto; gap: 18px; }
-    .destaques .card:first-child { grid-column: 1; grid-row: 1 / span 2; }
-    .destaques .card:first-child .foto { aspect-ratio: auto; flex: 1; min-height: 360px; }
-    .destaques .card:first-child .foto img { object-fit: cover; }
-  }
-
-  /* sobre, antes do rodapé */
   .sobre { margin: 40px 0 0; border-radius: 28px; padding: 22px; display: grid; gap: 22px; align-items: center; }
   .sobre img { width: 100%; border-radius: 20px; aspect-ratio: 1; object-fit: cover; }
   .sobre h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin: 0 0 6px; letter-spacing: -0.02em; }
   .sobre .quem { color: var(--ciano); font-weight: 600; margin: 0 0 14px; }
   .sobre p { color: var(--suave); margin: 0 0 12px; max-width: 60ch; }
   .sobre p strong { color: var(--texto); }
-  .sobre .botao { margin-top: 8px; }
-  .fatos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 18px 0 6px; }
-  .fatos div { border-radius: var(--raio-p); padding: 10px 12px; }
-  .fatos strong { display: block; }
-  .fatos span { font-size: 12px; color: var(--suave); }
+  .contato { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
   @media (min-width: 860px) { .sobre { grid-template-columns: 340px 1fr; padding: 32px; gap: 40px; } }
+  footer { padding: 26px 0 40px; color: var(--suave); font-size: 13px; }
+  footer p { margin: 6px 0; max-width: 85ch; }
+  footer a { color: var(--texto); }
 
-  /* entrada suave dos cards */
   .js .surge { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
   .js .surge.dentro { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) { .js .surge { opacity: 1; transform: none; transition: none; } }
-  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-    .vidro { background: rgba(30, 26, 60, .92); }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .luzes span, .mascote, .balao { animation: none; }
+    .slides { transition: none; }
+    .js .surge { opacity: 1; transform: none; transition: none; }
+    #particulas { display: none; }
   }
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { .vidro { background: rgba(30,26,60,.92); } }
 </style>
 <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 <div class="luzes" aria-hidden="true"><span></span><span></span><span></span></div>
+<canvas id="particulas" aria-hidden="true"></canvas>
+<a class="mascote fala" href="#vitrine" aria-label="Ir para os achadinhos"><span class="balao">Achei uns trecos!</span><img src="img/mascote.png" alt="" width="440" height="550"></a>
 
 <header class="topo miolo">
   <div class="barra vidro">
     <a class="logo" href="#"><img src="img/icone.png" alt="" width="34" height="34"><span>Outro Mundo Otaku</span></a>
     <label class="busca">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input id="busca" type="search" placeholder="Buscar: Gojo, Luffy, chaveiro..." aria-label="Buscar produto">
+      <input id="busca" type="search" placeholder="Buscar: Gojo, Luffy, mangá, camiseta..." aria-label="Buscar produto">
     </label>
-    <a class="botao" href="#vitrine">Ver ofertas</a>
+    <a class="botao" href="#vitrine">Ver tudo</a>
   </div>
 </header>
 
@@ -283,25 +232,30 @@
   <section class="heroi">
     <div>
       <span class="selo-topo vidro"><b>Atualizado</b> Mais vendidos de <span class="visto"></span></span>
-      <h1>Achadinhos de anime com <em>preço de Shopee</em></h1>
-      <p class="sub">Action figures, chaveiros, camisetas e decoração dos animes mais pedidos. A gente garimpa os mais vendidos; você compra direto na Shopee.</p>
-      <a class="botao" href="#vitrine">Ver os achadinhos</a>
-      <div class="numeros">
-        <div class="vidro"><strong id="n-produtos">12</strong><span>achados nesta semana</span></div>
-        <div class="vidro"><strong id="n-menor">R$ 8,45</strong><span>o mais barato</span></div>
-        <div class="vidro"><strong>Shopee</strong><span>pagamento e entrega</span></div>
+      <h1><span id="n-hero">100+</span> achadinhos de anime com <em>preço de Shopee</em></h1>
+      <p class="sub">Action figures, chaveiros, camisetas, mangás e decoração dos animes mais pedidos. A gente garimpa os mais vendidos; você compra direto na Shopee.</p>
+      <div class="acoes-heroi">
+        <a class="botao" href="#vitrine">Ver os achadinhos</a>
+        <a class="botao claro" href="#painel">Ver os destaques</a>
       </div>
     </div>
-    <div class="slider vidro" aria-roledescription="carrossel" aria-label="Ofertas em destaque">
-      <div class="janela"><div class="slides" id="slides"></div></div>
-      <div class="slider-nav">
-        <div class="pontos" id="pontos" role="group" aria-label="Escolher oferta"></div>
-        <div class="setas">
-          <button class="seta" type="button" id="ant" aria-label="Oferta anterior">‹</button>
-          <button class="seta" type="button" id="prox" aria-label="Próxima oferta">›</button>
+    <div class="palco">
+      <div class="slider vidro" aria-roledescription="carrossel" aria-label="Ofertas em destaque">
+        <div class="janela"><div class="slides" id="slides"></div></div>
+        <div class="slider-nav">
+          <div class="pontos" id="pontos" role="group" aria-label="Escolher oferta"></div>
+          <div class="setas">
+            <button class="seta" type="button" id="ant" aria-label="Oferta anterior">‹</button>
+            <button class="seta" type="button" id="prox" aria-label="Próxima oferta">›</button>
+          </div>
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="bloco" id="painel" aria-labelledby="painel-titulo">
+    <div class="bloco-cab"><div><h2 id="painel-titulo">Painel da semana</h2><p>Os números da vitrine e os campeões de cada categoria.</p></div></div>
+    <div class="painel" id="painel-grade"></div>
   </section>
 
   <section class="bloco" aria-labelledby="ofertas-titulo">
@@ -316,15 +270,15 @@
   </section>
 
   <section class="bloco" aria-labelledby="destaques-titulo">
-    <div class="bloco-cab"><div><h2 id="destaques-titulo">Destaques da semana</h2><p>Os que mais saem para colecionar e decorar o quarto.</p></div></div>
+    <div class="bloco-cab"><div><h2 id="destaques-titulo">Destaques da semana</h2><p>Os que mais saem na Shopee entre os achadinhos de anime.</p></div></div>
     <div class="destaques" id="destaques"></div>
   </section>
 
-  <section class="vitrine" id="vitrine" aria-labelledby="vitrine-titulo">
+  <section class="bloco" id="vitrine" aria-labelledby="vitrine-titulo">
     <div class="cab-vitrine">
       <div>
         <h2 id="vitrine-titulo">Todos os achadinhos</h2>
-        <p>Preços vistos na Shopee em <span class="visto"></span>. O valor final é sempre o da Shopee.</p>
+        <p><span id="n-todos"></span> produtos. Preços vistos na Shopee em <span class="visto"></span>; o valor final é sempre o da Shopee.</p>
       </div>
       <select class="ordem" id="ordem" aria-label="Ordenar">
         <option value="vendidos">Mais vendidos</option>
@@ -334,6 +288,7 @@
     </div>
     <div class="filtros" role="group" aria-label="Filtrar por anime"></div>
     <div class="grade" aria-live="polite"></div>
+    <div class="mais"><button class="botao claro" type="button" id="mais">Ver mais achadinhos</button></div>
   </section>
 
   <section class="confia" aria-label="Como funciona a compra">
@@ -343,7 +298,7 @@
     </div>
     <div class="vidro">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff4d8d" stroke-width="2" aria-hidden="true"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
-      <div><h3>Só o que está vendendo</h3><p>Toda semana a lista é refeita com os produtos de anime mais vendidos da Shopee.</p></div>
+      <div><h3>Só o que está vendendo</h3><p>A lista é refeita com os produtos de anime mais vendidos da Shopee.</p></div>
     </div>
     <div class="vidro">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/></svg>
@@ -356,98 +311,60 @@
     <div>
       <h2 id="sobre-titulo">Sobre o Outro Mundo Otaku</h2>
       <p class="quem">Achadinhos de anime + um anime brasileiro feito por nós</p>
-      <p>Toda semana a gente garimpa na Shopee os produtos de anime que mais estão vendendo e junta tudo aqui, com preço e link direto. Você compra na Shopee, do jeito de sempre.</p>
-      <p>E a gente também faz anime: <strong>Laje de Outro Mundo</strong>. O Rafa, ajudante de pedreiro do Capão, morre segurando uma laje e acorda num mundo onde as lendas do folclore estão vivas, cercado de goblins. Os episódios são curtos e saem no Instagram, e quem decide o que acontece é o público, nos comentários.</p>
-      <div class="fatos">
-        <div class="vidro"><strong>Semanal</strong><span>lista renovada</span></div>
-        <div class="vidro"><strong>Shopee</strong><span>compra e entrega</span></div>
-        <div class="vidro"><strong>Você vota</strong><span>no anime</span></div>
+      <p>A gente garimpa na Shopee os produtos de anime que mais estão vendendo e junta tudo aqui, com preço e link direto. Você compra na Shopee, do jeito de sempre.</p>
+      <p>E a gente também faz anime: <strong>Laje de Outro Mundo</strong>. O Rafa, ajudante de pedreiro do Capão, morre segurando uma laje e acorda num mundo onde as lendas do folclore estão vivas, cercado de goblins (o Parafuso, aí de cima, é um deles). Os episódios são curtos e saem no Instagram, e quem decide o que acontece é o público, nos comentários.</p>
+      <p>Dúvida ou sugestão de produto? Fala com a gente.</p>
+      <div class="contato">
+        <a class="botao" href="https://www.instagram.com/outromundo.otaku/">Seguir @outromundo.otaku</a>
+        <a class="botao claro" href="https://wa.me/5522999984849">WhatsApp</a>
+        <a class="botao claro" href="mailto:marianadesouzaregis@gmail.com">E-mail</a>
       </div>
-      <a class="botao" href="https://www.instagram.com/outromundo.otaku/">Seguir @outromundo.otaku</a>
     </div>
   </section>
 </main>
 
 <footer class="miolo">
-  <p>Outro Mundo Otaku · @outromundo.otaku. Somos afiliados da Shopee: pagamento, entrega e troca são feitos pela Shopee e pela loja que vende.</p>
-  <p>Produtos de lojas da Shopee; os personagens pertencem aos seus criadores. Preços e estoque podem mudar a qualquer momento.</p>
+  <p>Outro Mundo Otaku · @outromundo.otaku · contato: <a href="mailto:marianadesouzaregis@gmail.com">marianadesouzaregis@gmail.com</a> · WhatsApp (22) 99998-4849</p>
+  <p>Somos afiliados da Shopee: pagamento, entrega e troca são feitos pela Shopee e pela loja que vende. Produtos de lojas da Shopee; os personagens pertencem aos seus criadores. Preços e estoque podem mudar a qualquer momento.</p>
 </footer>
 
+<script src="produtos.js"></script>
 <script>
-// Para trocar um produto: mude a linha dele. "link" recebe o link de afiliada da Mariana
-// (gerado no painel da Shopee Afiliados); enquanto não houver, fica o link normal do produto.
-// A ordem da lista é a de mais vendidos (o primeiro vira o destaque do topo).
-const VISTO_EM = "06/11/2026";
-const PRODUTOS = [
-  { anime: "One Piece", nome: "Mini figuras de montar: Luffy, Zoro, Sanji e bando", preco: "8,45", de: "13,00", envio: "Envio internacional",
-    img: "https://down-br.img.susercontent.com/file/sg-11134201-7rfex-m34bid7xyd1457",
-    link: "https://shopee.com.br/Nova-Figura-De-Anime-Quente-Macaco-D-Luffy-Roronoa-Zoro-Sanji-Usopp-Nami-Gild-Tesoro-Bloco-Brinquedos-Presente-i.1223905076.28819010711" },
-  { anime: "Jujutsu Kaisen", nome: "Chaveiro Itadori, Gojo, Megumi ou Nobara", preco: "25,37", de: "32,73", envio: "Envio internacional",
-    img: "https://down-br.img.susercontent.com/file/sg-11134201-7rccq-lr2iulqhuouv46",
-    link: "https://shopee.com.br/Chaveiro-de-figura-de-anime-Pingente-Itadori-Yuji-Satoru-Gojo-Fushiguro-Megumi-Kugisaki-Nobara-modelo-de-boneca-i.230709939.43911480291" },
-  { anime: "Jujutsu Kaisen", nome: "Action figure Satoru Gojo", preco: "27,90", de: "100,00", envio: "Envio do Rio de Janeiro",
-    img: "https://down-br.img.susercontent.com/file/br-11134207-820lo-mql6545wh3i93d",
-    link: "https://shopee.com.br/Action-Figure-Satoru-Gojo-Jujutsu-Kaisen-Boneco-Anime-Colecionável-para-Decoração-i.406923398.58264122524" },
-  { anime: "Hunter x Hunter", nome: "Chaveiro Gon e Killua", preco: "19,72", de: "21,60", envio: "Envio internacional",
-    img: "https://down-br.img.susercontent.com/file/cn-11134207-7r98o-lo86zzz06j0n94",
-    link: "https://shopee.com.br/Chaveiro-Desenho-Animado-Anime-HUNTER-Gon-Killua-Boneca-para-Crianças-Presente-de-Festa-i.1006215031.25566578071" },
-  { anime: "One Piece", nome: "Mini figura Luffy Gear 5 (Nika), 10 cm", preco: "23,61", de: "39,90", envio: "Envio internacional",
-    img: "https://down-br.img.susercontent.com/file/sg-11134301-7rd65-luxaabjd93f67f",
-    link: "https://shopee.com.br/Mini-Figura-De-Ação-Sol-Deus-Nika-Estátua-Anime-Figuri-ne-Pvc-Modelo-Boneca-Coleção-Brinquedo-Presente-Crianças-10cm-i.1006215031.27705912631" },
-  { anime: "One Piece", nome: "Bonecos colecionáveis com caixa", preco: "19,90", envio: "Envio de São Paulo",
-    img: "https://down-br.img.susercontent.com/file/br-11134207-820lx-msjw823jjoxw19",
-    link: "https://shopee.com.br/Bonecos-Colecionáveis-One-Piece-Figuras-Anime-com-Caixa-i.447368311.58214570340" },
-  { anime: "Dragon Ball", nome: "Boneco 20 cm: Goku, Vegeta, Gogeta ou Broly", preco: "33,24", de: "34,99", envio: "Envio de São Paulo",
-    img: "https://down-br.img.susercontent.com/file/br-11134207-820l5-mpo2l9k910xsbc",
-    link: "https://shopee.com.br/Boneco-Dragon-Ball-Z-Action-Figure-20cm-Colecionável-Anime-Goku-Vegeta-Gogeta-Broly-i.1680814037.58212863235" },
-  { anime: "Spy x Family", nome: "Camiseta Anya, unissex", preco: "29,40", envio: "Envio de São Paulo · preço com cupom",
-    img: "https://down-br.img.susercontent.com/file/sg-11134201-81zv8-misxmdlshqfacc",
-    link: "https://shopee.com.br/Camiseta-Anime-Fofa-Confortável-Estilosa-Spy-X-Family-Anya-Yor-Loid-Forger-Unissex-Streetwear-i.1598252592.58202482457" },
-  { anime: "Naruto", nome: "Kit 4 bonecos articulados: Naruto, Sasuke, Kakashi e Minato", preco: "56,00", de: "89,90", envio: "Envio de São Paulo",
-    img: "https://down-br.img.susercontent.com/file/br-11134207-820lg-mn4li400pnnkd8",
-    link: "https://shopee.com.br/Kit-4-Bonecos-Naruto-Anime-Uzumaki-Articulados-Sasuke-Kakashi-Minato-i.467311566.58209001401" },
-  { anime: "One Piece", nome: "Kit 3 placas Wanted, 15x21 cm, MDF", preco: "19,90", de: "79,77", envio: "Envio de São Paulo",
-    img: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-mddwn62b0z020e",
-    link: "https://shopee.com.br/Kit-3-Placa-Decorativa-One-Piece-15x21cm-em-MDF-Premium-–-Anime-Geek-Quarto-Decor-Procurados-Wanted-i.1587138998.18999857380" },
-  { anime: "Vários", nome: "Katana de brinquedo: Demon Slayer, One Piece, Bleach, Naruto", preco: "79,90", de: "120,00", envio: "Envio de São Paulo",
-    img: "https://down-br.img.susercontent.com/file/br-11134207-7r98o-mczhdwp2vlf684",
-    link: "https://shopee.com.br/Espada-Katana-Brinquedo-de-Animes-Demon-Slayer-One-Piece-Bleach-Naruto-para-Treino-i.497033867.19525474160" },
-  { anime: "Haikyuu", nome: "Miniaturas Hinata, Kageyama, Kuroo e Kenma", preco: "19,99", envio: "Envio do Paraná",
-    img: "https://down-br.img.susercontent.com/file/br-11134207-820lw-mozvmekaj0n466",
-    link: "https://shopee.com.br/haikyuu-figure-shoyo-kageyama-kuro-kenma-gacha-gachapon-miniatura-action-figure-colecionáveis-i.293475817.22394989620" },
-];
-
-const num = s => parseFloat(String(s).replace(".", "").replace(",", "."));
+const PRODUTOS = (window.PRODUTOS || []).map((p, i) => ({ ...p, rank: i, off: p.d ? Math.round((1 - p.p / p.d) * 100) : 0 }));
+const VISTO_EM = window.VISTO_EM || "";
+const IMG = (h, mini) => "https://down-br.img.susercontent.com/file/" + h + (mini ? "_tn" : "");
+const LINK = l => "https://s.shopee.com.br/" + l;
 const brl = v => "R$ " + v.toFixed(2).replace(".", ",");
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-PRODUTOS.forEach((p, i) => { p.rank = i; p.v = num(p.preco); p.off = p.de ? Math.round((1 - p.v / num(p.de)) * 100) : 0; });
-
+const reduz = matchMedia("(prefers-reduced-motion: reduce)").matches;
 document.querySelectorAll(".visto").forEach(e => (e.textContent = VISTO_EM));
-document.getElementById("n-produtos").textContent = PRODUTOS.length;
-document.getElementById("n-menor").textContent = brl(Math.min(...PRODUTOS.map(p => p.v)));
+document.getElementById("n-todos").textContent = PRODUTOS.length;
+document.getElementById("n-hero").textContent = PRODUTOS.length;
 
 const card = (p, extra = "") => `
-    <a class="card vidro surge" ${extra} href="${esc(p.link)}" target="_blank" rel="noopener sponsored">
-      <div class="foto">${p.off >= 10 ? `<span class="tag desc">-${p.off}%</span>` : ""}
-        <img src="${esc(p.img)}" alt="${esc(p.nome)}" loading="lazy" width="300" height="300" referrerpolicy="no-referrer"></div>
-      <span class="anime">${esc(p.anime)}</span>
-      <h3 class="nome">${esc(p.nome)}</h3>
-      <div class="linha-preco"><span class="preco">${brl(p.v)}</span>${p.de ? `<span class="antes">R$ ${p.de}</span>` : ""}</div>
-      <span class="envio">${esc(p.envio)}</span>
-      <span class="comprar">Comprar na Shopee</span>
-    </a>`;
-const reduz = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  <a class="card vidro surge" ${extra} href="${LINK(p.l)}" target="_blank" rel="noopener sponsored">
+    <div class="foto">${p.off >= 10 ? `<span class="tag desc">-${p.off}%</span>` : ""}
+      <img src="${IMG(p.img, true)}" alt="${esc(p.n)}" loading="lazy" width="300" height="300" referrerpolicy="no-referrer"></div>
+    <span class="anime">${esc(p.a)}</span>
+    <h3 class="nome">${esc(p.n)}</h3>
+    <div class="linha-preco"><span class="preco">${brl(p.p)}</span>${p.d ? `<span class="antes">${brl(p.d)}</span>` : ""}</div>
+    <span class="vendidos">${esc(p.v)} vendidos</span>
+    <span class="comprar">Comprar na Shopee</span>
+  </a>`;
 
-// slide do topo: as 5 ofertas com mais desconto passando sozinhas
-const noSlide = [...PRODUTOS].filter(p => p.off > 0).sort((a, b) => b.off - a.off).slice(0, 5);
-const slides = document.getElementById("slides");
-const pontos = document.getElementById("pontos");
+// entradas suaves
+const vistos = new IntersectionObserver(ents => ents.forEach(en => { if (en.isIntersecting) { en.target.classList.add("dentro"); vistos.unobserve(en.target); } }), { rootMargin: "0px 0px -5% 0px" });
+const observa = raiz => raiz.querySelectorAll(".surge:not(.dentro)").forEach(e => vistos.observe(e));
+
+// slide do topo: os mais vendidos com desconto
+const noSlide = [...PRODUTOS].filter(p => p.off >= 15 && p.vn >= 1000).sort((a, b) => b.vn - a.vn).slice(0, 6);
+const slides = document.getElementById("slides"), pontos = document.getElementById("pontos");
 slides.innerHTML = noSlide.map((p, i) => `
-  <a class="slide${i ? "" : " ativo"}" href="${esc(p.link)}" target="_blank" rel="noopener sponsored" aria-hidden="${i ? "true" : "false"}" ${i ? 'tabindex="-1"' : ""}>
-    <div class="foto"><span class="tag top">${esc(p.anime)}</span><span class="tag desc">-${p.off}%</span>
-      <img src="${esc(p.img)}" alt="${esc(p.nome)}" width="600" height="600" ${i ? 'loading="lazy"' : ""} referrerpolicy="no-referrer"></div>
-    <h2>${esc(p.nome)}</h2>
-    <div class="linha-preco"><span class="preco">${brl(p.v)}</span><span class="antes">R$ ${p.de}</span></div>
+  <a class="slide" href="${LINK(p.l)}" target="_blank" rel="noopener sponsored" aria-hidden="${i ? "true" : "false"}" ${i ? 'tabindex="-1"' : ""}>
+    <div class="foto"><span class="tag top">${esc(p.a)}</span><span class="tag desc">-${p.off}%</span>
+      <img src="${IMG(p.img)}" alt="${esc(p.n)}" width="600" height="600" ${i ? 'loading="lazy"' : ""} referrerpolicy="no-referrer"></div>
+    <h2>${esc(p.n)}</h2>
+    <div class="linha-preco"><span class="preco">${brl(p.p)}</span><span class="antes">${brl(p.d)}</span></div>
     <span class="botao">Comprar na Shopee</span>
   </a>`).join("");
 pontos.innerHTML = noSlide.map((p, i) => `<button type="button" aria-label="Oferta ${i + 1}" aria-current="${!i}"></button>`).join("");
@@ -455,11 +372,7 @@ let atual = 0, relogio = null;
 function vai(n) {
   atual = (n + noSlide.length) % noSlide.length;
   slides.style.transform = `translateX(${-atual * 100}%)`;
-  slides.querySelectorAll(".slide").forEach((s, i) => {
-    const ok = i === atual;
-    s.classList.toggle("ativo", ok); s.setAttribute("aria-hidden", !ok);
-    ok ? s.removeAttribute("tabindex") : s.setAttribute("tabindex", "-1");
-  });
+  slides.querySelectorAll(".slide").forEach((s, i) => { const ok = i === atual; s.setAttribute("aria-hidden", !ok); ok ? s.removeAttribute("tabindex") : s.setAttribute("tabindex", "-1"); });
   pontos.querySelectorAll("button").forEach((b, i) => b.setAttribute("aria-current", i === atual));
 }
 const roda = () => { if (!reduz) { clearInterval(relogio); relogio = setInterval(() => vai(atual + 1), 4500); } };
@@ -472,63 +385,110 @@ caixa.addEventListener("mouseenter", para); caixa.addEventListener("mouseleave",
 caixa.addEventListener("focusin", para); caixa.addEventListener("focusout", roda);
 let x0 = null;
 caixa.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; }, { passive: true });
-caixa.addEventListener("touchend", e => {
-  if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null;
-  if (Math.abs(dx) > 40) { vai(atual + (dx < 0 ? 1 : -1)); roda(); }
-});
+caixa.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 40) { vai(atual + (dx < 0 ? 1 : -1)); roda(); } });
 document.addEventListener("visibilitychange", () => (document.hidden ? para() : roda()));
 roda();
 
-// carrossel de ofertas: do maior desconto para o menor
+// painel de destaques
+const porAnime = {}; PRODUTOS.forEach(p => (porAnime[p.a] = (porAnime[p.a] || 0) + 1));
+const melhor = (arr, f) => [...arr].sort(f)[0];
+const maisVendido = melhor(PRODUTOS, (a, b) => b.vn - a.vn);
+const maiorDesc = melhor(PRODUTOS.filter(p => p.vn >= 300), (a, b) => b.off - a.off);
+const maisBarato = melhor(PRODUTOS.filter(p => !/encanto|sapato/i.test(p.n)), (a, b) => a.p - b.p);
+const comDesc = PRODUTOS.filter(p => p.off > 0);
+const media = comDesc.reduce((s, p) => s + p.off, 0) / (comDesc.length || 1);
+const recorde = (rot, p, valor) => `<a class="recorde vidro surge" href="${LINK(p.l)}" target="_blank" rel="noopener sponsored">
+  <img src="${IMG(p.img, true)}" alt="" loading="lazy" referrerpolicy="no-referrer">
+  <div><span>${rot}</span><b>${esc(p.n)}</b><em>${valor}</em></div></a>`;
+const ranking = Object.entries(porAnime).filter(([a]) => a !== "Vários").sort((a, b) => b[1] - a[1]);
+const maxA = ranking[0] ? ranking[0][1] : 1;
+document.getElementById("painel-grade").innerHTML = `
+  <div class="numero vidro surge"><span>Achadinhos na vitrine</span><strong>${PRODUTOS.length}</strong><small>${Object.keys(porAnime).length} categorias</small></div>
+  <div class="numero vidro surge"><span>Desconto médio</span><strong>${Math.round(media)}%</strong><small>em ${comDesc.length} produtos com desconto</small></div>
+  <div class="ranking vidro surge"><h3>Animes com mais achadinhos</h3><div class="barras">${ranking.map(([a, n]) =>
+    `<button type="button" data-anime="${esc(a)}"><span>${esc(a)}</span><span class="trilha"><span class="enche" style="--x:${n / maxA}"></span></span><b>${n}</b></button>`).join("")}</div></div>
+  ${recorde("Mais vendido", maisVendido, `${esc(maisVendido.v)} vendidos`)}
+  ${recorde("Maior desconto", maiorDesc, `-${maiorDesc.off}% · ${brl(maiorDesc.p)}`)}
+  ${recorde("Mais barato", maisBarato, brl(maisBarato.p))}
+  <div class="numero vidro surge"><span>Mais barato a partir de</span><strong>${brl(Math.min(...PRODUTOS.map(p => p.p)))}</strong><small>com link direto na Shopee</small></div>`;
+const barras = new IntersectionObserver(ents => ents.forEach(en => { if (en.isIntersecting) { en.target.querySelectorAll(".enche").forEach(e => (e.style.transform = `scaleX(${e.style.getPropertyValue("--x")})`)); barras.disconnect(); } }), { threshold: .3 });
+barras.observe(document.querySelector(".ranking"));
+document.querySelector(".barras").addEventListener("click", e => {
+  const b = e.target.closest("button[data-anime]"); if (!b) return;
+  escolheAnime(b.dataset.anime); document.getElementById("vitrine").scrollIntoView({ behavior: reduz ? "auto" : "smooth" });
+});
+
+// carrossel de descontos e destaques
 const trilho = document.getElementById("trilho");
-trilho.innerHTML = [...PRODUTOS].filter(p => p.off > 0).sort((a, b) => b.off - a.off).map(p => card(p)).join("");
-document.querySelectorAll("[data-trilho]").forEach(b => b.addEventListener("click", () =>
-  trilho.scrollBy({ left: Number(b.dataset.trilho) * trilho.clientWidth * 0.8, behavior: reduz ? "auto" : "smooth" })));
+trilho.innerHTML = [...PRODUTOS].filter(p => p.off >= 20).sort((a, b) => b.off - a.off).slice(0, 16).map(p => card(p)).join("");
+document.querySelectorAll("[data-trilho]").forEach(b => b.addEventListener("click", () => trilho.scrollBy({ left: Number(b.dataset.trilho) * trilho.clientWidth * .8, behavior: reduz ? "auto" : "smooth" })));
+const fig = PRODUTOS.filter(p => /figure|boneco|figura|estátua/i.test(p.n)).sort((a, b) => b.vn - a.vn);
+document.getElementById("destaques").innerHTML = fig.slice(0, 5).map(p => card(p)).join("");
 
-// destaques: escolhidos a dedo (o primeiro fica grande)
-const DESTAQUES = ["Action figure Satoru Gojo", "Kit 4 bonecos", "Kit 3 placas", "Boneco 20 cm", "Mini figura Luffy"];
-document.getElementById("destaques").innerHTML = DESTAQUES
-  .map(n => PRODUTOS.find(p => p.nome.startsWith(n))).filter(Boolean).map(p => card(p)).join("");
-
-// filtros, busca e ordem
-const animes = ["Todos", ...new Set(PRODUTOS.map(p => p.anime).filter(a => a !== "Vários")), "Vários"];
+// vitrine completa: filtros, busca, ordem e "ver mais"
+const animes = ["Todos", ...Object.keys(porAnime).filter(a => a !== "Vários").sort((a, b) => porAnime[b] - porAnime[a]), "Vários"];
 const filtros = document.querySelector(".filtros");
-filtros.innerHTML = animes.map((a, i) => `<button class="filtro" type="button" aria-pressed="${i === 0}">${a}</button>`).join("");
-let anime = "Todos";
-const grade = document.querySelector(".grade");
-const busca = document.getElementById("busca");
-const ordem = document.getElementById("ordem");
-
-const vistos = new IntersectionObserver(ents => ents.forEach(en => {
-  if (en.isIntersecting) { en.target.classList.add("dentro"); vistos.unobserve(en.target); }
-}), { rootMargin: "0px 0px -5% 0px" });
-
-function desenha() {
+filtros.innerHTML = animes.map((a, i) => `<button class="filtro" type="button" data-a="${esc(a)}" aria-pressed="${i === 0}">${esc(a)}<small>${a === "Todos" ? PRODUTOS.length : porAnime[a]}</small></button>`).join("");
+let anime = "Todos", mostrando = 24;
+const grade = document.querySelector(".grade"), busca = document.getElementById("busca"), ordem = document.getElementById("ordem"), mais = document.getElementById("mais");
+function lista() {
   const q = busca.value.trim().toLowerCase();
-  let lista = PRODUTOS.filter(p => (anime === "Todos" || p.anime === anime) &&
-    (!q || (p.nome + " " + p.anime).toLowerCase().includes(q)));
-  if (ordem.value === "menor") lista = [...lista].sort((a, b) => a.v - b.v);
-  else if (ordem.value === "desconto") lista = [...lista].sort((a, b) => b.off - a.off);
-  else lista = [...lista].sort((a, b) => a.rank - b.rank);
-  grade.innerHTML = lista.length
-    ? lista.map((p, i) => card(p, `style="transition-delay:${Math.min(i, 8) * 50}ms"`)).join("")
-    : `<p class="vazio">Nenhum achadinho com "${esc(busca.value)}". Tente outro nome.</p>`;
-  grade.querySelectorAll(".surge").forEach(e => vistos.observe(e));
+  let l = PRODUTOS.filter(p => (anime === "Todos" || p.a === anime) && (!q || (p.n + " " + p.a).toLowerCase().includes(q)));
+  if (ordem.value === "menor") l = [...l].sort((a, b) => a.p - b.p);
+  else if (ordem.value === "desconto") l = [...l].sort((a, b) => b.off - a.off);
+  return l;
 }
-document.querySelectorAll("#trilho .surge, #destaques .surge").forEach(e => vistos.observe(e));
-filtros.addEventListener("click", e => {
-  const b = e.target.closest(".filtro"); if (!b) return;
-  anime = b.textContent;
-  filtros.querySelectorAll(".filtro").forEach(x => x.setAttribute("aria-pressed", x === b));
+function desenha() {
+  const l = lista();
+  grade.innerHTML = l.length ? l.slice(0, mostrando).map((p, i) => card(p, `style="transition-delay:${Math.min(i % 24, 8) * 40}ms"`)).join("")
+    : `<p class="vazio">Nenhum achadinho com "${esc(busca.value)}". Tente outro nome.</p>`;
+  mais.parentElement.style.display = l.length > mostrando ? "" : "none";
+  mais.textContent = `Ver mais achadinhos (${l.length - Math.min(mostrando, l.length)})`;
+  observa(grade);
+}
+function escolheAnime(a) {
+  anime = a; mostrando = 24;
+  filtros.querySelectorAll(".filtro").forEach(x => x.setAttribute("aria-pressed", x.dataset.a === a));
   desenha();
-});
+}
+filtros.addEventListener("click", e => { const b = e.target.closest(".filtro"); if (b) escolheAnime(b.dataset.a); });
 busca.addEventListener("input", () => {
-  desenha();
-  if (busca.value && window.scrollY < document.getElementById("vitrine").offsetTop - 120)
-    document.getElementById("vitrine").scrollIntoView({ behavior: "smooth" });
+  mostrando = 24; desenha();
+  if (busca.value && window.scrollY < document.getElementById("vitrine").offsetTop - 120) document.getElementById("vitrine").scrollIntoView({ behavior: "smooth" });
 });
-ordem.addEventListener("change", desenha);
+ordem.addEventListener("change", () => { mostrando = 24; desenha(); });
+mais.addEventListener("click", () => { mostrando += 24; desenha(); });
 desenha();
+observa(document);
+
+setTimeout(() => document.querySelector(".mascote").classList.remove("fala"), 6000);
+
+// partículas: pontinhos de luz subindo devagar (só desenha com a aba visível)
+(function () {
+  if (reduz) return;
+  const cv = document.getElementById("particulas"), cx = cv.getContext("2d");
+  let w, h, pts = [], dpr = Math.min(devicePixelRatio || 1, 2);
+  const cores = ["#ffffff", "#22d3ee", "#ff4d8d", "#c4b5fd"];
+  function tam() {
+    w = innerWidth; h = innerHeight; cv.width = w * dpr; cv.height = h * dpr; cv.style.width = w + "px"; cv.style.height = h + "px"; cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const n = Math.round(Math.min(70, (w * h) / 16000));
+    pts = Array.from({ length: n }, () => novo(Math.random() * h));
+  }
+  function novo(y) { return { x: Math.random() * w, y, r: Math.random() * 1.8 + .4, v: Math.random() * .35 + .1, d: Math.random() * .6 - .3, c: cores[(Math.random() * cores.length) | 0], f: Math.random() * Math.PI * 2 }; }
+  function quadro(t) {
+    if (!document.hidden) {
+      cx.clearRect(0, 0, w, h);
+      for (const p of pts) {
+        p.y -= p.v; p.x += Math.sin(t / 1800 + p.f) * .25 + p.d * .1;
+        if (p.y < -10) Object.assign(p, novo(h + 10));
+        const a = .35 + .35 * Math.sin(t / 700 + p.f);
+        cx.globalAlpha = a; cx.fillStyle = p.c; cx.beginPath(); cx.arc(p.x, p.y, p.r, 0, Math.PI * 2); cx.fill();
+      }
+    }
+    requestAnimationFrame(quadro);
+  }
+  addEventListener("resize", tam); tam(); requestAnimationFrame(quadro);
+})();
 </script>
 </body>
 </html>
