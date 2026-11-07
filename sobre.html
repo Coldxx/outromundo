@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://down-br.img.susercontent.com; connect-src 'none'; base-uri 'none'; form-action 'self'; object-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Sobre nós | Outro Mundo Otaku</title>
+<meta name="description" content="Quem faz o Outro Mundo Otaku, como escolhemos os achadinhos de anime, como funciona a compra pela Shopee e o anime brasileiro que estamos fazendo.">
+<meta property="og:title" content="Sobre nós | Outro Mundo Otaku">
+<meta property="og:description" content="Achadinhos de anime garimpados toda semana e um anime brasileiro que o público ajuda a escrever.">
+<meta property="og:image" content="https://coldxx.github.io/outromundo/img/rafa-parafuso.jpg">
+<meta name="theme-color" content="#0b0a17">
+<link rel="icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+<script src="produtos.js"></script>
+<script src="comum.js"></script>
+</head>
+<body>
+<div class="luzes" aria-hidden="true"><span></span><span></span><span></span></div>
+<canvas id="particulas" aria-hidden="true"></canvas>
+<a class="mascote fala" href="loja.html" aria-label="Ver a loja completa"><span class="balao">Bora ver a loja?</span><img src="img/mascote.png" alt="" width="440" height="550"></a>
+
+<header class="topo miolo">
+  <nav class="barra vidro" aria-label="Principal">
+    <a class="logo" href="./"><img src="img/icone.png" alt="" width="34" height="34"><span>Outro Mundo Otaku</span></a>
+    <ul class="menu" id="menu">
+      <li><a href="./">Início</a></li>
+      <li><a href="loja.html">Loja</a></li>
+      <li><a href="./#ofertas">Ofertas</a></li>
+      <li><a href="./#painel">Destaques</a></li>
+      <li><a href="sobre.html" aria-current="page">Sobre nós</a></li>
+    </ul>
+    <form class="busca" action="loja.html" method="get" role="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input name="q" type="search" maxlength="60" placeholder="Buscar: Gojo, Luffy, mangá..." aria-label="Buscar produto na loja">
+    </form>
+    <button class="abre-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<main class="miolo">
+  <section class="sobre-cab">
+    <div>
+      <span class="selo-topo vidro"><b>Sobre nós</b> Feito no Brasil</span>
+      <h1>A gente garimpa. <em>Você escolhe.</em></h1>
+      <p>O Outro Mundo Otaku é um projeto brasileiro de quem gosta de anime. Toda semana a gente procura na Shopee os produtos de anime que mais estão saindo e junta tudo num lugar só, com preço, quantidade vendida e link direto. Sem você ter que rolar mil páginas.</p>
+    </div>
+    <img src="img/rafa-parafuso.jpg" alt="O Rafa e o Parafuso, personagens do nosso anime" width="720" height="720">
+  </section>
+
+  <section class="bloco" aria-labelledby="faz-titulo">
+    <div class="bloco-cab"><div><h2 id="faz-titulo">O que a gente faz</h2><p>Três coisas, bem feitas.</p></div></div>
+    <div class="passos">
+      <div class="passo vidro">
+        <div class="icone"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+        <h3>Garimpo toda semana</h3>
+        <p>A lista é refeita com os produtos de anime mais vendidos do momento: action figures, chaveiros, camisetas, mangás, decoração e cosplay.</p>
+      </div>
+      <div class="passo vidro">
+        <div class="icone"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ff4d8d" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div>
+        <h3>Preço e vendas à vista</h3>
+        <p>Cada achadinho mostra o preço, o desconto e quantos já foram vendidos, com a data em que a gente conferiu.</p>
+      </div>
+      <div class="passo vidro">
+        <div class="icone"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg></div>
+        <h3>Link direto para a Shopee</h3>
+        <p>O botão leva para a página do produto na Shopee. Lá você vê fotos, avaliações e escolhe a variação antes de comprar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" aria-labelledby="transp-titulo">
+    <div class="bloco-cab"><div><h2 id="transp-titulo">Transparência</h2><p>O que você precisa saber antes de comprar.</p></div></div>
+    <div class="criterios">
+      <div class="criterio vidro">
+        <h3>Somos afiliados da Shopee</h3>
+        <p>Quando você compra por um link daqui, a Shopee nos paga uma pequena comissão pela indicação. O preço para você é exatamente o mesmo.</p>
+      </div>
+      <div class="criterio vidro">
+        <h3>Quem vende e entrega é a loja</h3>
+        <p>Pagamento, entrega, troca e devolução acontecem dentro da Shopee, com as regras e a garantia dela. A gente não recebe seu pagamento nem seus dados.</p>
+      </div>
+      <div class="criterio vidro">
+        <h3>Como escolhemos</h3>
+        <p>Pelo que mais vende na Shopee e por ser mesmo de anime. A gente não testa cada produto: antes de comprar, leia as avaliações e as fotos de quem já comprou.</p>
+      </div>
+      <div class="criterio vidro alerta">
+        <h3>Licenciado ou não?</h3>
+        <p>Muitos produtos são inspirados nos animes e não são licenciados pelos estúdios. Se você quer o oficial, confira a descrição e a loja na Shopee.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre vidro" aria-labelledby="anime-titulo">
+    <img class="retrato inteiro" src="img/mascote.png" alt="O Parafuso, goblin do nosso anime, acenando" width="440" height="550" loading="lazy">
+    <div>
+      <h2 id="anime-titulo">E a gente também faz anime</h2>
+      <p class="quem">Morri Segurando uma Laje e Acordei em Outro Mundo</p>
+      <p>Em 2080, no meio de um tornado, o Rafa segura uma marquise para duas senhoras escaparem e morre. Acorda num altar, venerado como deus por um povo frágil, num mundo de reinos em guerra, demônios e anjos. Ele é pacifista e vira protetor de quem precisa.</p>
+      <p>Os episódios são curtos, feitos aqui no Brasil e publicados no Instagram. Quem decide os rumos da história é o público, nos comentários.</p>
+      <a class="botao" href="https://www.instagram.com/outromundo.otaku/" rel="noopener">Acompanhar no Instagram</a>
+    </div>
+  </section>
+
+  <section class="bloco" aria-labelledby="faq-titulo">
+    <div class="bloco-cab"><div><h2 id="faq-titulo">Perguntas frequentes</h2></div></div>
+    <div class="faq">
+      <details class="vidro"><summary>Vocês vendem os produtos?</summary><p>Não. A gente indica produtos de lojas da Shopee. A compra, o pagamento e a entrega são feitos pela Shopee e pela loja que vende.</p></details>
+      <details class="vidro"><summary>É seguro comprar pelo link de vocês?</summary><p>O link abre a página oficial do produto na Shopee (o endereço começa com s.shopee.com.br e vai para shopee.com.br). Você paga dentro da Shopee, como sempre. Desconfie de qualquer pessoa que peça pagamento por fora.</p></details>
+      <details class="vidro"><summary>Pago mais caro comprando por aqui?</summary><p>Não. O preço é o mesmo. A comissão sai da Shopee, não do seu bolso.</p></details>
+      <details class="vidro"><summary>O preço da loja está diferente do que aparece aqui.</summary><p>Preço e estoque mudam rápido. A gente mostra o valor do dia em que conferiu; o que vale é sempre o que aparece na Shopee na hora da compra.</p></details>
+      <details class="vidro"><summary>Os produtos são originais?</summary><p>Depende da loja. Muitos são inspirados nos animes e não são licenciados. Confira a descrição, a loja e as avaliações antes de comprar.</p></details>
+      <details class="vidro"><summary>Posso sugerir um produto?</summary><p>Pode e deve. Manda no WhatsApp ou no Instagram o que você está procurando que a gente garimpa.</p></details>
+    </div>
+  </section>
+
+  <section class="bloco" aria-labelledby="contato-titulo">
+    <div class="bloco-cab"><div><h2 id="contato-titulo">Fale com a gente</h2><p>Dúvida, sugestão ou parceria.</p></div></div>
+    <div class="contatos">
+      <a class="contato-card vidro" href="https://wa.me/5522999984849" rel="noopener"><span>WhatsApp</span><strong>(22) 99998-4849</strong><small>Respondemos assim que der</small></a>
+      <a class="contato-card vidro" href="mailto:marianadesouzaregis@gmail.com"><span>E-mail</span><strong>marianadesouzaregis@gmail.com</strong><small>Para parcerias e assuntos mais longos</small></a>
+      <a class="contato-card vidro" href="https://www.instagram.com/outromundo.otaku/" rel="noopener"><span>Instagram</span><strong>@outromundo.otaku</strong><small>Achadinhos e episódios do anime</small></a>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="colunas miolo">
+    <div>
+      <div class="marca-rod"><img src="img/icone.png" alt="" width="40" height="40">Outro Mundo Otaku</div>
+      <p>Os achadinhos de anime mais vendidos da Shopee, garimpados toda semana. E um anime brasileiro que o público ajuda a escrever.</p>
+      <span class="selo-afiliado">Afiliados Shopee</span>
+    </div>
+    <div>
+      <h4>Navegar</h4>
+      <ul>
+        <li><a href="./">Início</a></li>
+        <li><a href="loja.html">Loja completa</a></li>
+        <li><a href="./#painel">Destaques da semana</a></li>
+        <li><a href="./#ofertas">Ofertas</a></li>
+        <li><a href="sobre.html">Sobre nós</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fale com a gente</h4>
+      <ul>
+        <li><a href="https://wa.me/5522999984849" rel="noopener">WhatsApp (22) 99998-4849</a></li>
+        <li><a href="mailto:marianadesouzaregis@gmail.com">marianadesouzaregis@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/outromundo.otaku/" rel="noopener">Instagram @outromundo.otaku</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fim miolo">
+    <p>© <span class="ano">2026</span> Outro Mundo Otaku. Somos afiliados da Shopee: pagamento, entrega e trocas são feitos pela Shopee e pela loja que vende.</p>
+    <p>Os produtos são de lojas da Shopee e os personagens pertencem aos seus criadores. Preços vistos em <span class="visto"></span>; podem mudar a qualquer momento.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -55,6 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".n-produtos").forEach(e => (e.textContent = OMO.produtos.length));
   document.querySelectorAll(".ano").forEach(e => (e.textContent = new Date().getFullYear()));
 
+  // menu do celular (☰): abre e fecha; fecha ao escolher um link, ao tocar fora ou com Esc
+  const abre = document.querySelector(".abre-menu"), menu = document.getElementById("menu");
+  if (abre && menu) {
+    const poe = aberto => { menu.classList.toggle("aberto", aberto); abre.setAttribute("aria-expanded", aberto); abre.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu"); };
+    abre.addEventListener("click", () => poe(!menu.classList.contains("aberto")));
+    menu.addEventListener("click", e => { if (e.target.closest("a")) poe(false); });
+    document.addEventListener("click", e => { if (!e.target.closest(".barra")) poe(false); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") poe(false); });
+  }
+
   // o balão do mascote some depois de alguns segundos
   const m = document.querySelector(".mascote");
   if (m) setTimeout(() => m.classList.remove("fala"), 6000);
