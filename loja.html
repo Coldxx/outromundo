@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://down-br.img.susercontent.com; connect-src 'none'; base-uri 'none'; form-action 'self'; object-src 'none'; manifest-src 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Loja completa | Outro Mundo Otaku</title>
+<meta name="description" content="Todos os achadinhos de anime da Outro Mundo Otaku, com filtros por anime, preço e desconto. Compra direto na Shopee.">
+<meta property="og:title" content="Loja completa | Outro Mundo Otaku">
+<meta property="og:description" content="Mais de 100 achadinhos de anime da Shopee com filtros por anime e preço.">
+<meta property="og:image" content="https://coldxx.github.io/outromundo/img/rafa-parafuso.jpg">
+<meta name="theme-color" content="#0b0a17">
+<link rel="icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+<script src="produtos.js"></script>
+<script src="comum.js"></script>
+</head>
+<body>
+<div class="luzes" aria-hidden="true"><span></span><span></span><span></span></div>
+<canvas id="particulas" aria-hidden="true"></canvas>
+<a class="mascote fala" href="#loja" aria-label="Voltar ao topo da loja"><span class="balao">Tem de tudo aqui!</span><img src="img/mascote.png" alt="" width="440" height="550"></a>
+
+<header class="topo miolo" id="loja">
+  <div class="barra vidro">
+    <a class="logo" href="./"><img src="img/icone.png" alt="" width="34" height="34"><span>Outro Mundo Otaku</span></a>
+    <label class="busca">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="busca" type="search" maxlength="60" placeholder="Buscar: Gojo, Luffy, mangá, camiseta..." aria-label="Buscar produto">
+    </label>
+    <a class="botao" href="./">Início</a>
+  </div>
+</header>
+
+<main class="miolo">
+  <section class="loja-cab">
+    <a class="voltar" href="./">← Voltar ao início</a>
+    <h1>Loja completa</h1>
+    <p><span class="n-produtos">100+</span> achadinhos de anime mais vendidos da Shopee. Preços vistos em <span class="visto"></span>; o valor final é sempre o da Shopee.</p>
+  </section>
+
+  <section class="controles vidro" aria-label="Filtros da loja">
+    <div class="filtros" id="filtros" role="group" aria-label="Filtrar por anime"></div>
+    <div class="linha">
+      <span class="contagem" id="contagem" aria-live="polite"></span>
+      <div class="setas">
+        <select class="faixa" id="faixa" aria-label="Faixa de preço">
+          <option value="">Qualquer preço</option>
+          <option value="0-20">Até R$ 20</option>
+          <option value="20-50">De R$ 20 a R$ 50</option>
+          <option value="50-9999">Acima de R$ 50</option>
+        </select>
+        <select class="ordem" id="ordem" aria-label="Ordenar">
+          <option value="vendidos">Mais vendidos</option>
+          <option value="menor">Menor preço</option>
+          <option value="maior">Maior preço</option>
+          <option value="desconto">Maior desconto</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section class="loja-grade" aria-label="Produtos">
+    <div class="grade" id="grade"></div>
+    <div class="mais"><button class="botao claro grande" type="button" id="mais">Ver mais</button></div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="colunas miolo">
+    <div>
+      <div class="marca-rod"><img src="img/icone.png" alt="" width="40" height="40">Outro Mundo Otaku</div>
+      <p>Os achadinhos de anime mais vendidos da Shopee, garimpados toda semana. E um anime brasileiro que o público ajuda a escrever.</p>
+      <span class="selo-afiliado">Afiliados Shopee</span>
+    </div>
+    <div>
+      <h4>Navegar</h4>
+      <ul>
+        <li><a href="./">Início</a></li>
+        <li><a href="loja.html">Loja completa</a></li>
+        <li><a href="./#painel">Destaques da semana</a></li>
+        <li><a href="./#sobre">Sobre</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fale com a gente</h4>
+      <ul>
+        <li><a href="https://wa.me/5522999984849" rel="noopener">WhatsApp (22) 99998-4849</a></li>
+        <li><a href="mailto:marianadesouzaregis@gmail.com">marianadesouzaregis@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/outromundo.otaku/" rel="noopener">Instagram @outromundo.otaku</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fim miolo">
+    <p>© <span class="ano">2026</span> Outro Mundo Otaku. Somos afiliados da Shopee: pagamento, entrega e trocas são feitos pela Shopee e pela loja que vende.</p>
+    <p>Os produtos são de lojas da Shopee e os personagens pertencem aos seus criadores. Preços vistos em <span class="visto"></span>; podem mudar a qualquer momento.</p>
+  </div>
+</footer>
+<script src="loja.js"></script>
+</body>
+</html>
