@@ -275,3 +275,20 @@ h1 em { font-style: normal; background: linear-gradient(90deg, var(--rosa), var(
   .js .surge { opacity: 1; transform: none; transition: none; }
   #particulas { display: none; }
 }
+
+/* página do anime */
+.anime-cab { padding: 40px 0 6px; display: grid; gap: 26px; align-items: center; }
+.anime-cab h1 { font-size: clamp(2rem, 6vw, 3.4rem); }
+.anime-cab .sub { color: var(--suave); font-size: 1.1rem; max-width: 52ch; margin: 0 0 22px; }
+.anime-cab .sub strong { color: var(--texto); }
+.jp { font-family: "Noto Sans JP", sans-serif; font-weight: 900; }
+.player { border-radius: var(--raio); padding: 10px; justify-self: center; width: 100%; max-width: 380px; }
+.player video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 14px; background: #000; }
+@media (min-width: 900px) { .anime-cab { grid-template-columns: 1.2fr .8fr; padding-top: 64px; gap: 48px; } }
+.episodios { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+@media (min-width: 800px) { .episodios { grid-template-columns: 1fr 1fr; } }
+.episodios li { border-radius: 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 18px; color: var(--suave); }
+.episodios li a { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; text-decoration: none; color: var(--texto); }
+.episodios li span { font-size: 13px; white-space: nowrap; }
+.episodios .disponivel { border-color: rgba(52,211,153,.5); }
+.episodios .disponivel span { color: var(--verde); font-weight: 700; }
