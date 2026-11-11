@@ -14,7 +14,10 @@
   function Livro(palco, folhas, aoMudar) {
     let atual = 0, ocupado = false;
     folhas.forEach(f => palco.appendChild(f));
-    const mostra = i => { folhas.forEach((f, j) => f.className = f.className.replace(/\b(ativa|embaixo|vira-frente|vira-tras)\b/g, "").trim() + (j === i ? " ativa" : "")); };
+    const mostra = i => {
+      folhas.forEach((f, j) => f.className = f.className.replace(/\b(ativa|embaixo|vira-frente|vira-tras)\b/g, "").trim() + (j === i ? " ativa" : ""));
+      palco.classList.toggle("no-inicio", i === 0); palco.classList.toggle("no-fim", i === folhas.length - 1);
+    };
     function vai(i, animar = true) {
       i = Math.max(0, Math.min(folhas.length - 1, i));
       if (i === atual || ocupado) { if (!ocupado) aoMudar(atual, folhas.length); return; }
@@ -43,13 +46,30 @@
     return api;
   }
 
-  function zonas(palco, livro) {
+  const SETA = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${d}"/></svg>`;
+  function zonas(palco) {
     ["esq", "dir"].forEach(lado => {
       const b = document.createElement("button");
       b.type = "button"; b.className = "zona " + lado; b.setAttribute("aria-label", lado === "esq" ? "Página anterior" : "Próxima página");
+      b.innerHTML = `<span class="seta">${SETA(lado === "esq" ? "m15 5-7 7 7 7" : "m9 5 7 7-7 7")}</span>`;
       b.addEventListener("click", () => { const l = palco._livro; l.vai(l.atual + (lado === "dir" ? 1 : -1)); });
       palco.appendChild(b);
     });
+    // botões também na barra de baixo, perto do polegar
+    const rod = document.querySelector(".l-rodape");
+    if (rod && !rod.querySelector(".passa")) {
+      const mk = (lado, txt) => { const b = document.createElement("button"); b.type = "button"; b.className = "passa " + lado; b.innerHTML = lado === "esq" ? SETA("m15 5-7 7 7 7") + `<span>${txt}</span>` : `<span>${txt}</span>` + SETA("m9 5 7 7-7 7"); b.setAttribute("aria-label", txt);
+        b.addEventListener("click", () => { const l = palco._livro; l.vai(l.atual + (lado === "dir" ? 1 : -1)); }); return b; };
+      rod.prepend(mk("esq", "Voltar")); rod.append(mk("dir", "Próxima"));
+    }
+    // dica na primeira visita
+    if (!guarda.ler("ler-dica") && !palco.querySelector(".dica")) {
+      const d = document.createElement("div"); d.className = "dica";
+      d.innerHTML = `<div><b>Como ler</b><p>Toque nas setas <span>‹ ›</span> dos lados ou arraste a página para o lado.</p><button type="button" class="botao">Entendi</button></div>`;
+      const some = () => { d.remove(); guarda.pôr("ler-dica", 1); };
+      d.addEventListener("click", some);
+      palco.appendChild(d);
+    }
   }
 
   /* ---------------- MANGÁ ---------------- */
@@ -79,7 +99,7 @@
     const livro = Livro($("#palco"), folhas, (i, n) => {
       carrega(i); regua.value = i + 1; cont.textContent = `${i + 1} / ${n}`;
       guarda.pôr("ler-manga", { c, p: i });
-      fimEl.classList.toggle("ativo", false);
+      if (i < n - 1) fimEl.classList.remove("ativo");
     });
     zonas($("#palco"), livro);
     carrega(inicio); livro.vai(inicio, false);
@@ -87,9 +107,10 @@
     // fim do capítulo
     const proximo = $("#l-proximo");
     if (c < caps.length) { proximo.href = "manga.html?c=" + (c + 1); proximo.textContent = `Ler Cap. ${c + 1}`; } else { proximo.href = "novel.html?v=2"; proximo.textContent = "Continuar na novel (Vol. 2)"; }
-    $("#palco").addEventListener("click", e => {
-      if (e.target.classList.contains("dir") && livro.atual === livro.total - 1) fimEl.classList.add("ativo");
-    });
+    // aviso de fim: quando a pessoa tenta passar DA última página (o clique é lido antes de virar)
+    document.addEventListener("click", e => {
+      if (e.target.closest(".zona.dir, .passa.dir") && livro.atual === livro.total - 1) fimEl.classList.add("ativo");
+    }, true);
     $("#l-fecha-fim").addEventListener("click", () => fimEl.classList.remove("ativo"));
     // modo rolagem
     const rol = $("#rolagem");
