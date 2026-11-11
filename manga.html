@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Mangá | Outro Mundo Otaku</title>
+<meta name="description" content="Leia o mangá de Morri Segurando uma Laje e Acordei em Outro Mundo.">
+<meta name="theme-color" content="#0d0c14">
+<link rel="icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="leitura.css">
+<script src="leitura/dados_manga.js"></script>
+</head>
+<body class="leitor" data-leitor="manga">
+<div class="l-barra">
+  <a href="ler.html" aria-label="Voltar para a lista">←</a>
+  <div class="l-titulo"><b id="l-cap">Mangá</b><span>Morri Segurando uma Laje e Acordei em Outro Mundo</span></div>
+  <button type="button" id="l-modo">Rolar</button>
+</div>
+<div class="palco" id="palco">
+  <div class="aviso-fim" id="l-fim">
+    <div>
+      <h2>Fim do capítulo</h2>
+      <p>Gostou? Segue o @outromundo.otaku para ver o anime.</p>
+      <div class="acoes"><a class="botao" id="l-proximo" href="ler.html">Próximo</a><button class="botao claro" type="button" id="l-fecha-fim">Reler</button></div>
+    </div>
+  </div>
+</div>
+<div class="rolagem" id="rolagem"></div>
+<div class="l-rodape">
+  <input type="range" id="l-regua" min="1" max="1" value="1" aria-label="Ir para a página">
+  <span id="l-pag">1 / 1</span>
+</div>
+<script src="leitor.js"></script>
+</body>
+</html>

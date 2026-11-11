@@ -1,0 +1,1 @@
+window.NOVELS = [{"v":1,"volume":"Volume 1","titulo":"O Altar da Mata de Anhangá","capitulos":10},{"v":2,"volume":"Volume 2","titulo":"A Panela","capitulos":11},{"v":3,"volume":"Volume 3","titulo":"Arrimo","capitulos":11}];

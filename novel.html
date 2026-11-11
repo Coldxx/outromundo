@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Light novel | Outro Mundo Otaku</title>
+<meta name="description" content="Leia a light novel de Morri Segurando uma Laje e Acordei em Outro Mundo.">
+<meta name="theme-color" content="#0d0c14">
+<link rel="icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Literata:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="leitura.css">
+</head>
+<body class="leitor" data-leitor="novel">
+<div class="l-barra">
+  <a href="ler.html" aria-label="Voltar para a lista">←</a>
+  <div class="l-titulo"><b id="l-cap">Light novel</b><span>Morri Segurando uma Laje e Acordei em Outro Mundo</span></div>
+  <button type="button" id="l-menos" aria-label="Diminuir a letra">A−</button>
+  <button type="button" id="l-mais" aria-label="Aumentar a letra">A+</button>
+  <button type="button" id="l-sumario" aria-label="Capítulos">☰</button>
+</div>
+<div class="palco" id="palco">
+  <nav class="sumario" id="sumario" aria-label="Capítulos"><h3>Capítulos</h3></nav>
+</div>
+<div class="l-rodape">
+  <input type="range" id="l-regua" min="1" max="1" value="1" aria-label="Ir para a página">
+  <span id="l-pag">1 / 1</span>
+</div>
+<script src="leitor.js"></script>
+</body>
+</html>
